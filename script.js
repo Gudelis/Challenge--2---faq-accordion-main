@@ -2,9 +2,9 @@ const faqQuestions = document.querySelectorAll("h4");
 
 faqQuestions.forEach((question) => {
   question.addEventListener("click", () => {
-    faqQuestions.forEach((q) => {
-      q.nextElementSibling.style.display = "none";
-      q.firstElementChild.src = "./assets/images/icon-minus.svg";
+    faqQuestions.forEach((questionCheck) => {
+      questionCheck.nextElementSibling.style.display = "none";
+      questionCheck.firstElementChild.src = "./assets/images/icon-minus.svg";
     });
 
     if (question.nextElementSibling.style.display === "none") {
