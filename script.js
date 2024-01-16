@@ -4,15 +4,15 @@ faqQuestions.forEach((question) => {
   question.addEventListener("click", () => {
     faqQuestions.forEach((q) => {
       q.nextElementSibling.style.display = "none";
-      q.firstElementChild.src = "/assets/images/icon-minus.svg";
+      q.firstElementChild.src = "./assets/images/icon-minus.svg";
     });
 
     if (question.nextElementSibling.style.display === "none") {
       question.nextElementSibling.style.display = "block";
-      question.firstElementChild.src = "/assets/images/icon-plus.svg";
+      question.firstElementChild.src = "./assets/images/icon-plus.svg";
     } else {
       question.nextElementSibling.style.display = "none";
-      question.firstElementChild.src = "/assets/images/icon-minus.svg";
+      question.firstElementChild.src = "./assets/images/icon-minus.svg";
     }
   });
 });
@@ -30,12 +30,12 @@ document.addEventListener("keydown", (e) => {
 const hideCurrentAndMove = (direction) => {
   faqQuestions[currentIndex].nextElementSibling.style.display = "none";
   faqQuestions[currentIndex].firstElementChild.src =
-    "/assets/images/icon-minus.svg";
+    "./assets/images/icon-minus.svg";
 
   currentIndex =
     (currentIndex + direction + faqQuestions.length) % faqQuestions.length;
 
   faqQuestions[currentIndex].nextElementSibling.style.display = "block";
   faqQuestions[currentIndex].firstElementChild.src =
-    "/assets/images/icon-plus.svg";
+    "./assets/images/icon-plus.svg";
 };
